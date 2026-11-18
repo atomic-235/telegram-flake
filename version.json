@@ -1,4 +1,6 @@
 {
   "version": "0.1.0",
-  "assets": {}
+  "assets": {
+    "x86_64-linux": "sha256-2aMPf5rM7tk93crc2MnJ/5N32r1g/nsSD7qOw6jIlL0="
+  }
 }
