@@ -1,0 +1,23 @@
+[package]
+name = "telegram"
+version = "0.1.0"
+edition = "2024"
+description = "Telegram user-account CLI: read, search, send, digest"
+license = "MIT"
+repository = "https://github.com/atomic-235/telegram-flake"
+
+[dependencies]
+anyhow = "1.0.104"
+base64 = "0.23.1"
+chrono = "0.4.45"
+clap = { version = "4.6.8", features = ["derive", "env"] }
+grammers-client = { version = "0.12.0", features = ["proxy"] }
+grammers-session = { version = "0.12.0", default-features = false }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+tokio = { version = "1.54.1", features = ["rt-multi-thread", "macros", "time", "sync"] }
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
